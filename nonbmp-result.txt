@@ -1,0 +1,4 @@
+65001 65001 949 949 65001 65001
+Korean_Korea.utf8
+MultiByte: 성수 Sŏngsu 🐱
+WideChar:  성수 Sŏngsu
