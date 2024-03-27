@@ -1,0 +1,49 @@
+
+C:\Users\nooriro>cd Downloads\test-cc-edivbug\out
+
+C:\Users\nooriro\Downloads\test-cc-edivbug\out>edivbug1
+Testing edivby4(), edivby100(), and edivby400()...
+error: -------------------------------------------------
+error:                 |     ediv(a, b) |     edivbyb(a)
+error:           a   b |       quot rem |       quot rem
+error: -------------------------------------------------
+error: -2147483648   4 | -536870913   0 | -536870912   0
+Took 0.001000 sec (Aborted)
+Use '--all' option to catch all errors (needs huge disk space)
+
+C:\Users\nooriro\Downloads\test-cc-edivbug\out>edivbug2
+-------------------------------------------------
+                |     ediv(a, 4) |     ediv(a, b)
+          a   b |       quot rem |       quot rem
+-------------------------------------------------
+-2147483648   4 | -536870913   0 | -536870912   0
+-2147483644   4 | -536870912   0 | -536870911   0
+-2147483640   4 | -536870911   0 | -536870910   0
+        -12   4 |         -4   0 |         -3   0
+         -8   4 |         -3   0 |         -2   0
+         -4   4 |         -2   0 |         -1   0
+          0   4 |          0   0 |          0   0
+          4   4 |          1   0 |          1   0
+          8   4 |          2   0 |          2   0
+ 2147483636   4 |  536870909   0 |  536870909   0
+ 2147483640   4 |  536870910   0 |  536870910   0
+ 2147483644   4 |  536870911   0 |  536870911   0
+-------------------------------------------------
+
+C:\Users\nooriro\Downloads\test-cc-edivbug\out>edivbug3
+                 arguments     return_value
+                     a   b         quot rem
+expected:  -2147483648   4 | -536870912   0
+expected:  -2147483644   4 | -536870911   0
+expected:  -2147483640   4 | -536870910   0
+expected:          -12   4 |         -3   0
+expected:           -8   4 |         -2   0
+expected:           -4   4 |         -1   0
+actual:    -2147483648   4 | -536870913   0
+actual:    -2147483644   4 | -536870912   0
+actual:    -2147483640   4 | -536870911   0
+actual:            -12   4 |         -4   0
+actual:             -8   4 |         -3   0
+actual:             -4   4 |         -2   0
+
+C:\Users\nooriro\Downloads\test-cc-edivbug\out>
